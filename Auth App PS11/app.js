@@ -29,7 +29,6 @@ function register(){
 
     let user = {name, email, mobile, dob, city, address, password};
 
-    // AJAX-like save
     setTimeout(() => {
         users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
@@ -64,7 +63,7 @@ function login(){
         document.getElementById("loginEmail").value="";
         document.getElementById("loginPass").value="";
 
-        window.location.href = "list.html";x
+        window.location.href = "list.html";
     } 
     else{
         alert("Invalid Login");

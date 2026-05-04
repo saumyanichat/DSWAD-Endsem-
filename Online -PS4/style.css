@@ -45,7 +45,8 @@ h2{
 /* LEARNING STEPS */
 .steps{
     display:flex;
-    gap:15px;
+    gap:15px;   
+    /* justify-content: space-evenly; */
 }
 
 .step{

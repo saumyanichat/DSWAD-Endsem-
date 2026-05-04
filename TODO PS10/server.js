@@ -9,21 +9,26 @@ const FILE = "task.json";
 
 /* GET */
 app.get("/task", (req, res) => {
-    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
+    let info =fs.readFileSync(FILE, "utf-8");
+    let data = JSON.parse(info);
     res.json(data);
 });
 
 /* ADD */
 app.post("/add", (req, res) => {
-    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
-    data.push({ text: req.body.text });
+    let info =fs.readFileSync(FILE, "utf-8");
+    let data = JSON.parse(info);
+    data.push({ 
+        text: req.body.text 
+    });
     fs.writeFileSync(FILE, JSON.stringify(data));
     res.send("Added");
 });
 
 /* DELETE */
 app.delete("/delete/:i", (req, res) => {
-    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
+    let info =fs.readFileSync(FILE, "utf-8");
+    let data = JSON.parse(info);
     data.splice(req.params.i, 1);
     fs.writeFileSync(FILE, JSON.stringify(data));
     res.send("Deleted");
@@ -31,7 +36,8 @@ app.delete("/delete/:i", (req, res) => {
 
 /* UPDATE */
 app.put("/update/:i", (req, res) => {
-    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
+    let info =fs.readFileSync(FILE, "utf-8");
+    let data = JSON.parse(info);
     data[req.params.i].text = req.body.text;
     fs.writeFileSync(FILE, JSON.stringify(data));
     res.send("Updated");

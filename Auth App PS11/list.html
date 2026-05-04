@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>User List</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>User Data</h2>
 
-<h2>User Data</h2>
-
-<table border="1" id="table">
-    <tr>
+    <table border="1" id="table">
+      <tr>
         <th>Name</th>
         <th>Email</th>
         <th>Mobile</th>
         <th>City</th>
-    </tr>
-</table>
+      </tr>
+    </table>
 
-<script>
+    <script>
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      let table = document.getElementById("table");
 
-let users = JSON.parse(localStorage.getItem("users")) || [];
-let table = document.getElementById("table");
-
-users.forEach(u => {
-    table.innerHTML += `
+      users.forEach((u) => {
+        table.innerHTML += `
         <tr>
             <td>${u.name}</td>
             <td>${u.email}</td>
@@ -30,9 +28,7 @@ users.forEach(u => {
             <td>${u.city}</td>
         </tr>
     `;
-});
-
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>

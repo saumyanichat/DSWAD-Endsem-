@@ -8,16 +8,17 @@ body{
 header{
     text-align:center;
     padding:10px;
-    background:#323131;
+    background:#4a4646;
 }
 
 .container{
     width:95%;
     margin:auto;
+    color: #000000;
 }
 
 section{
-    background:#201f21;
+    background:#ece1f7;
     margin:15px 0;
     padding:15px;
     border-radius:8px;
@@ -36,17 +37,20 @@ h2{
 
 ul{
     padding-left:20px;
+    
 }
 
 table{
     width:100%;
     border-collapse:collapse;
+     color: #131111;
 }
 
 th,td{
     border:1px solid #d4c0c0;
     padding:8px;
     text-align:center;
+   
 }
 
 footer{

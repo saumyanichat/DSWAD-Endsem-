@@ -1,21 +1,21 @@
-    // npm init -y 
-    // npm install express
-    // node Server.js
+// npm init -y
+// npm install express
+// node Server.js
 
-    const express=require('express');
-    const fs=require('fs');
+const express = require("express");
+const fs = require("fs");
+const app = express();
 
-    const app=express();
+app.use(express.json());
+app.use(express.static("public"));
 
-    app.use(express.static(__dirname));
+app.get("/api/products", (req, res) => {
+  const data = fs.readFileSync("products.json", "utf-8");
+  const products = JSON.parse(data);
 
-    app.get('/api/products' , (req,res)=>{
-        const data=fs.readFileSync('products.json','utf-8');
-        const products=JSON.parse(data);
+  res.json(products);
+});
 
-        res.json(products);
-    });
-
-    app.listen(3000,()=>{
-        console.log("Hello server port no. 3000")
-    })
+app.listen(3000, () => {
+  console.log("Hello server port no. 3000");
+});

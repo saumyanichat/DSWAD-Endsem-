@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f4f6f9;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+input {
+  padding: 6px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}

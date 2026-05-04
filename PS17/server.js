@@ -3,7 +3,8 @@ const fs = require('fs');
 
 const app = express();
 
-app.use(express.static(__dirname)); 
+app.use(express.json());
+app.use(express.static("public")); 
 
 app.get('/api/employees', (req, res) =>{
     const data = fs.readFileSync('employees.json','utf-8');
