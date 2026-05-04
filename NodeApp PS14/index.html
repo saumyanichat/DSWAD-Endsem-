@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        .user-item {
+            display: flex;
+            margin-bottom: 10px;
+            
+        }
+     </style>
+</head>
+<body>
+
+<h2>User Data</h2>
+<ul id="list"></ul>
+
+<script>
+
+fetch('/users')
+.then(res => res.json())
+.then(data => {
+
+    let list = document.getElementById("list");
+
+    data.forEach(user => {
+        list.innerHTML += `
+            <li class="user-item">
+                <div class="name">${user.name} - </div>
+                <div class="email">${user.email} - </div>
+                <div class="city">${user.city}</div>
+            </li>
+        `;
+    });
+
+});
+
+</script>
+
+</body>
+</html>

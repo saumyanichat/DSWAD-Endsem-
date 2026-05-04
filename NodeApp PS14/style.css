@@ -1,0 +1,47 @@
+/* 
+        body{
+            font-family: Arial;
+            background:#f4f6f9;
+            margin:0;
+            padding:0;
+        }
+
+        h2{
+            text-align:center;
+            margin-top:30px;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+            width:400px;
+            margin:30px auto;
+        }
+
+        li{
+            background:white;
+            margin:10px 0;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+            transition:0.2s;
+        }
+
+        li:hover{
+            transform:scale(1.02);
+        }
+
+        .name{
+            font-weight:bold;
+            color:#333;
+        }
+
+        .email{
+            color:#555;
+            font-size:14px;
+        }
+
+        .city{
+            color:#007bff;
+            font-size:13px;
+        } */

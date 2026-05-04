@@ -1,0 +1,31 @@
+body{
+    font-family: Arial;
+    background:#3d3a3a;
+    text-align:center;
+    margin-top:40px;
+}
+
+.box{
+    background:rgb(247, 241, 241);
+    width:320px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+input{
+    display:block;
+    width:90%;
+    margin:8px auto;
+    padding:8px;
+}
+
+button{
+    padding:8px;
+    width:100px;
+}
+
+a{
+    text-decoration:none;
+}

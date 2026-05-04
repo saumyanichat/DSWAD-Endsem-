@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Todo App</h2>
+
+<input id="t">
+<button onclick="add()">Add</button>
+
+<div id="list"></div>
+
+<script>
+
+// LOAD TASKS
+function load() {
+  fetch("/task")
+    .then(r => r.json())
+    .then(data => {
+      let html = "";
+
+      for (let i = 0; i < data.length; i++) {
+        html += `
+          <div class="task">
+            ${data[i].text}
+            <br> 
+            <button onclick="del(${i})">Del</button>
+            <button onclick="edit(${i})">Edit</button>
+          </div>
+        `;
+      }
+
+      document.getElementById("list").innerHTML = html;
+    });
+}
+
+// ADD
+function add() {
+  let t = document.getElementById("t").value;
+
+  fetch("/add", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: t })
+  })
+  .then(() => {
+    document.getElementById("t").value = "";
+    load();
+  });
+}
+
+// DELETE
+function del(i) {
+  fetch("/delete/" + i, { method: "DELETE" })
+    .then(() => load());
+}
+
+// UPDATE
+function edit(i) {
+  let t = prompt("New task:");
+
+  fetch("/update/" + i, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: t })
+  }).then(() => load());
+}
+
+// INITIAL LOAD
+load();
+
+</script>
+
+</body>
+</html>

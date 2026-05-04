@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🌦 Weather App</h2>
+
+<input id="city" placeholder="Enter city">
+<button onclick="getWeather()">Get Weather</button>
+
+<div id="output"></div>
+
+<script>
+
+function getWeather() {
+    let city = document.getElementById("city").value;
+
+    fetch(`/weather/${city}`)   // REAL AJAX
+    .then(res => res.json())
+    .then(data => {
+
+        let output = document.getElementById("output");
+
+        if (data.error) {
+            output.innerHTML = `<p style="color:red">${data.error}</p>`;
+        } else {
+            output.innerHTML = `
+                <div class="card">
+                    <h3>${city.toUpperCase()}</h3>
+                    <p>🌡 Temp: ${data.temp}°C</p>
+                    <p>💧 Humidity: ${data.humidity}%</p>
+                    <p>🌤 Condition: ${data.condition}</p>
+                </div>
+            `;
+        }
+    });
+}
+
+</script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+[
+  { "name": "Rahul", "email": "rahul@gmail.com", "city": "Pune" },
+  { "name": "Priya", "email": "priya@gmail.com", "city": "Mumbai" },
+  { "name": "Aman", "email": "aman@gmail.com", "city": "Delhi" },
+  { "name": "Sneha", "email": "sneha@gmail.com", "city": "Bangalore" },
+  { "name": "Vikram", "email": "vikram@gmail.com", "city": "Chennai" },
+  { "name": "Anjali", "email": "anjali@gmail.com", "city": "Hyderabad" },
+  { "name": "Rohit", "email": "rohit@gmail.com", "city": "Kolkata" },
+  { "name": "Neha", "email": "nehа@gmail.com", "city": " Ahmedabad" }
+]

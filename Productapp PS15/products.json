@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Headphones",
+    "price": "₹1999",
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRXcqtnMUuvosfFvtHD70S0qxEz8CGwvvTtV90wm9kpS__vw2x6CMikhXeCp2a8DaE80dGyfeLUhzevAW9DXqbeQOg2lLMTZ8jThmVe6koBbR4FPRQyLwXJUQ&usqp=CAc"},
+  {
+    "name": "Shoes",
+    "price": "₹2999",
+    "image": "https://via.placeholder.com/150"
+  }
+]
