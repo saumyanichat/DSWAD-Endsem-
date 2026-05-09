@@ -14,15 +14,15 @@
 <!-- HOME PAGE -->
 <div data-role="page" id="home">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
         <h1>PICT</h1>
 
         <div data-role="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#about" data-icon="info">About</a></li>
+                <li><a href="#courses" data-icon="grid">Courses</a></li>
+                <li><a href="#contact" data-icon="phone">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -32,28 +32,27 @@
         <p>Top engineering college in Pune</p>
     </div>
 
-
-   
 </div>
 
 
 <!-- ABOUT PAGE -->
 <div data-role="page" id="about">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
         <h1>About Us</h1>
     </div>
 
     <div data-role="content">
         <p>PICT is known for excellence in education.</p>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti nobis mollitia cupiditate quos nisi fuga velit molestiae similique repudiandae eos suscipit officiis nostrum, quaerat quo animi voluptates molestias laudantium doloribus pariatur? Quam reiciendis aliquam asperiores, nulla quasi corrupti assumenda, ratione laudantium ipsa tempore vero sed dolor velit, aperiam voluptate aspernatur illum ullam voluptatem sint?
-        </div>
-        <p></p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, molestiae! Suscipit consequatur facilis pariatur sunt amet fugiat labore nemo iusto nobis. Nihil, impedit, et enim rerum nulla rem quaerat eius eaque molestiae dolores ipsum. Quod ratione maxime quaerat modi nam harum nesciunt iure rerum similique, quibusdam, illum ea labore sint minima eos aspernatur ducimus doloremque obcaecati laboriosam illo nemo? Eveniet quaerat harum placeat atque excepturi quisquam, recusandae perferendis doloribus sed odio nulla rerum, suscipit delectus. Officiis possimus asperiores, eos hic aperiam modi consequuntur quos facilis, voluptates neque totam a fuga fugiat nam minus vel, magnam ducimus ratione ipsa sequi? Nobis?</p>
     </div>
 
-    <a href="http://www.pict.edu" data-role="button" >VIsit Out Official Website</a>  
+    <a href="http://www.pict.edu"
+       data-role="button"
+       data-theme="b"
+       data-inline="true"
+       data-icon="arrow-r">
+       Visit Official Website
+    </a>
 
 </div>
 
@@ -61,15 +60,13 @@
 <!-- COURSES PAGE -->
 <div data-role="page" id="courses">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
         <h1>Courses</h1>
     </div>
 
     <div data-role="content">
 
-        <div data-role="collapsible"></div>
-
-        <div data-role="collapsible">
+        <div data-role="collapsible" data-collapsed="false">
             <h3>Computer Engineering</h3>
             <p>Focus on software and systems.</p>
         </div>
@@ -77,8 +74,6 @@
         <div data-role="collapsible">
             <h3>Information Technology</h3>
             <p>Focus on IT and networks.</p>
-            <p></p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem natus iste sunt! Quidem est eius, recusandae, id libero mollitia cumque quas quam iusto sint tenetur, voluptas incidunt cum atque? Dicta quidem incidunt voluptatem alias.</p>
         </div>
 
         <div data-role="collapsible">
@@ -94,7 +89,7 @@
 <!-- CONTACT PAGE -->
 <div data-role="page" id="contact">
 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
         <h1>Contact</h1>    
     </div>
 
@@ -102,6 +97,13 @@
         <p>📍 Pune</p>
         <p>📞 1234567890</p>
         <p>📧 info@pict.edu</p>
+
+        <a href="#home"
+           data-role="button"
+           data-icon="home"
+           data-transition="slide">
+           Go Home
+        </a>
     </div>
 
 </div>

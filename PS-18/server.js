@@ -22,7 +22,7 @@ app.get("/insert", async (req, res) => {
       Film: "Aashiqui 2",
       Music_director: "Mithoon",
       Singer: "Arijit Singh",
-      Actor: "Aditya Roy Kapur",
+        Actor: "Aditya Roy Kapur",
         Actress: "Shraddha Kapoor",
     },
     {
@@ -83,7 +83,7 @@ app.get("/songs", async (req, res) => {
 
   songs.forEach((s) => {
     html += `
-    <tr>
+    
         <td>${s.Songname}</td>
         <td>${s.Film}</td>
         <td>${s.Music_director}</td>
@@ -93,7 +93,7 @@ app.get("/songs", async (req, res) => {
     </tr>`;
   });
 
-  html += "</table>";
+  html += `</table>`;
   res.send(html);
 });
 
